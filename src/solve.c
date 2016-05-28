@@ -11,6 +11,8 @@ float discriminant(float a, float b, float c) {
 }
 
 int solve(float a, float b, float c, float *x1, float *x2) {
+	if (x1 == NULL || x2 == NULL)
+		return ERROR;
         const float myr = discriminant(a, b, c);
         if (myr < 0)
 		return NO_ROOTS;
