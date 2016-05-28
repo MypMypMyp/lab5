@@ -11,7 +11,7 @@ float discriminant(float a, float b, float c) {
 }
 
 int solve(float a, float b, float c, float *x1, float *x2) {
-	if (x1 == NULL || x2 == NULL)
+	if (x1 == 0 || x2 == 0)
 		return ERROR;
         const float myr = discriminant(a, b, c);
         if (myr < 0)
