@@ -10,6 +10,16 @@ CTEST(test_suite, NO_ROOTS_test)
 	ASSERT_EQUAL(expected_root_number, test);
 }
 
+CTEST(test_suite, ROOTS_NULL_test)
+{
+	const float a = 2, b = 4, c = 2;
+
+	const int test = solve(a, b, c, NULL, NULL),
+		expected_root_number = -1;
+
+	ASSERT_EQUAL(expected_root_number, test);
+}
+
 CTEST(test_suite, ONE_ROOTS_test)
 {
 	const float a = 2, b = 4, c = 2,
